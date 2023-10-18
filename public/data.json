@@ -1,0 +1,53 @@
+
+[
+    {
+      "id": 1,
+      "type": "Apple",
+      "image": "https://i.postimg.cc/mZnFDsXC/Apple-Logo.png",
+      "title": "Elegant Garden Wedding",
+      "price": "$15,000"
+     
+    },
+    {
+      "id": 2,
+      "type": "Walton ",
+      "image":"https://i.postimg.cc/XvyydDrX/2159581.jpg"  ,
+      "title": "Superhero Themed Birthday Bash",
+      "price": "$500"
+      
+    },
+    {
+      "id": 3,
+      "type": "Sony",
+      "image": "https://i.postimg.cc/yxJq89Qq/sony.jpg",
+      "title": "Silver Anniversary Celebration",
+      "price": "$5,000"
+      
+    },
+    {
+      "id": 4,
+      "type":" Samsung",
+      "image":  "https://i.postimg.cc/Dw5K52bM/photo-1662947995643-0007c2b5ebb6.jpg",
+      "title": "Rustic Barn Engagement Soiree",
+      "price": "$2,500"
+     
+    },
+  
+    {
+      "id": 5,
+      "type": "Intel ",
+      "image": "https://i.postimg.cc/fTL7kCfS/photo-1649006708938-cf885c646df6.jpg",
+      "title": "Farewell to a Colleague",
+      "price": "$1,000"
+     
+    },
+    {
+      "id": 6,
+      "type": "LG ",
+      "image": "https://i.postimg.cc/MHky4JjC/lg-l-g-letter-logo-design-initial-linked-circle-uppercase-monogram-red-blue-190773411.webp",
+      "title": "Gender Reveal Baby Shower",
+      "price": "$800"
+     
+    }
+  ]
+  
