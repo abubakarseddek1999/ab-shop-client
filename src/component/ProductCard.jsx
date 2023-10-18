@@ -8,15 +8,29 @@ const ProductCard = ({product}) => {
     const { name,price,rating,type,details,brand,_id, photo}=product;
     return (
         <div className="my-5">
-            <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img className=" h-72" src={photo}alt="Shoes" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
-                    </div>
+            <div className="relative overflow-hidden shadow-lg transition-transform transform hover:scale-105  flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-xl" >
+                
+                <div className="relative m-0 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
+                    <img className="h-[200px] w-full object-contain"
+                        src={photo}
+                        alt="ui/ux review check"
+                    />
+                   
                 </div>
+                <div className="p-6">
+                    <h4 className="block font-sans text-center my-2 text-2xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                       {type}
+                    </h4>
+                    <h4 className="block font-sans text-center my-2 text-xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased">Brand name:
+                       {brand}
+                    </h4>
+
+
+                    <button className="btn  w-full "> Delete</button>
+                  
+                    
+                </div>
+               
             </div>
 
         </div>
