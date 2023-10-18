@@ -4,10 +4,10 @@ import Home from "../component/home/Home";
 import Login from "../component/Login";
 import Register from "../component/Register";
 import CardDetails from "../component/CardDetails";
-import Blog from "../component/Blog";
 import PrivetRoute from "../component/PrivetRoute";
 import NotFound from "../component/NotFound";
 import AddProduct from "../component/AddProduct";
+import MyCart from "../component/MyCart";
 
 
 const router = createBrowserRouter([
@@ -31,7 +31,8 @@ const router = createBrowserRouter([
         },
         {
           path:'/blog',
-          element:<PrivetRoute><Blog></Blog></PrivetRoute>
+          element:<PrivetRoute><MyCart></MyCart></PrivetRoute>,
+          loader: () => fetch('http://localhost:5000/product')
         },
         {
           path:'/about',
