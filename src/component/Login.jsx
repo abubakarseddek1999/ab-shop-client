@@ -24,6 +24,7 @@ const Login = () => {
 
         signInUser(email, password)
             .then(result => {
+                // show toast 
                 swal('login success')
                 console.log(result.user);
                 e.target.reset();
