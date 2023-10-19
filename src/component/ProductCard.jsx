@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product,setProducts,products }) => {
     console.log(product);
     const { name, price, rating, type, details, brand, _id, photo } = product;
 
@@ -27,7 +28,7 @@ const ProductCard = ({ product }) => {
                 //     'Your file has been deleted.',
                 //     'success'
                 //   )
-                fetch(`http://localhost:5000/product/${_id}`,{
+                fetch(`http://localhost:5000/product/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -39,6 +40,8 @@ const ProductCard = ({ product }) => {
                                 'Your Product has been deleted.',
                                 'success'
                             )
+                            const remaining= products.filter(pro => pro._id !== _id)
+                            setProducts(remaining);
                         }
                     })
             }
@@ -68,7 +71,9 @@ const ProductCard = ({ product }) => {
                     <div>
                         <div className="btn-group my-3 space-x-4 rounded-lg ml-3 ">
                             <button className="btn shadow-md ">Details</button>
-                            <button className="btn shadow-md">Edit</button>
+                            <Link to={`/updateProduct/${_id}`}>
+                                <button className="btn shadow-md">Edit</button>
+                            </Link>
                             <button onClick={() => handleDelete(_id)} className="btn shadow-md">Delete</button>
                         </div>
                     </div>
