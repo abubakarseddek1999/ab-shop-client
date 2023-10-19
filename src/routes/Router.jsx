@@ -10,6 +10,7 @@ import AddProduct from "../component/AddProduct";
 import MyCart from "../component/MyCart";
 import UpdateProduct from "../component/UpdateProduct";
 import ProductDetails from "../component/ProductDetails";
+import CategoryCard from "../component/CategoryCard";
 
 
 const router = createBrowserRouter([
@@ -50,6 +51,12 @@ const router = createBrowserRouter([
           path:'/Details/:id',
           element: <PrivetRoute><ProductDetails></ProductDetails></PrivetRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+
+        },
+        {
+          path:'/category',
+          element: <PrivetRoute><CategoryCard></CategoryCard></PrivetRoute>,
+          loader: () => fetch('http://localhost:5000/product')
 
         },
         // {

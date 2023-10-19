@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useLoaderData } from "react-router-dom";
 
 
@@ -38,7 +39,7 @@ const ProductDetails = () => {
                         <p>Rating: {rating}/5</p>
 
                     </div>
-                    <button className="btn btn-block"> Buy Now</button>
+                    <button className="btn btn-block"> Add To Cart</button>
 
 
 
