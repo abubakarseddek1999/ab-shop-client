@@ -3,12 +3,13 @@ import Layout from "../layout/Layout";
 import Home from "../component/home/Home";
 import Login from "../component/Login";
 import Register from "../component/Register";
-import CardDetails from "../component/CardDetails";
+
 import PrivetRoute from "../component/PrivetRoute";
 import NotFound from "../component/NotFound";
 import AddProduct from "../component/AddProduct";
 import MyCart from "../component/MyCart";
 import UpdateProduct from "../component/UpdateProduct";
+import ProductDetails from "../component/ProductDetails";
 
 
 const router = createBrowserRouter([
@@ -46,12 +47,19 @@ const router = createBrowserRouter([
 
         },
         {
-          path:'/cardDetail/:id',
-          element:<PrivetRoute> <CardDetails></CardDetails></PrivetRoute>,
-          loader: async () => (fetch("/data.json"))
-          // loader: async ({ params }) => (fetch(`${"data.json"}/${params.id}`))
+          path:'/Details/:id',
+          element: <PrivetRoute><ProductDetails></ProductDetails></PrivetRoute>,
+          loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
 
-        }
+        },
+        // {
+        //   path:'/productDetails/:id',
+        //   element:<PrivetRoute> <CardDetails></CardDetails></PrivetRoute>,
+        //   loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+        //   // loader: async () => (fetch("/data.json"))
+        //   // loader: async ({ params }) => (fetch(`${"data.json"}/${params.id}`))
+
+        // }
       ]
     },
   ]);

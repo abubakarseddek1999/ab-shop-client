@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 
 
-const ProductCard = ({ product,setProducts,products }) => {
+const ProductCard = ({ product, setProducts, products }) => {
     console.log(product);
     const { name, price, rating, type, details, brand, _id, photo } = product;
 
@@ -40,7 +40,7 @@ const ProductCard = ({ product,setProducts,products }) => {
                                 'Your Product has been deleted.',
                                 'success'
                             )
-                            const remaining= products.filter(pro => pro._id !== _id)
+                            const remaining = products.filter(pro => pro._id !== _id)
                             setProducts(remaining);
                         }
                     })
@@ -70,10 +70,17 @@ const ProductCard = ({ product,setProducts,products }) => {
 
                     <div>
                         <div className="btn-group my-3 space-x-4 rounded-lg ml-3 ">
-                            <button className="btn shadow-md ">Details</button>
+
+                           
+
+                            <Link to={`/Details/${_id}`}>
+                                <button className="btn shadow-md">Details</button>
+                            </Link>
+
                             <Link to={`/updateProduct/${_id}`}>
                                 <button className="btn shadow-md">Edit</button>
                             </Link>
+
                             <button onClick={() => handleDelete(_id)} className="btn shadow-md">Delete</button>
                         </div>
                     </div>
